@@ -1,3 +1,4 @@
+#Classe Ocultar
 from PIL import Image
 
 
