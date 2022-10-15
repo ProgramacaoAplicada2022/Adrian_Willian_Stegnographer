@@ -1,4 +1,6 @@
 from PIL import Image
+from Ruido import addruido
+
 
 class Ocultar:
     def __init__(self, mensagem, senha, origem):
@@ -11,6 +13,7 @@ class Ocultar:
         self._w = self._im.size[0]
         self._h = self._im.size[1]
         self._data = self._im.convert('RGB')
+        self._data = addruido(i=self._data, senha=self._senha)
         self._tambin = format(self._msglen, "b")
         self._chmsgbin = ""  # definido quando a função_criaMensagemBinaria é chamada
         self._chshbin = ""  # definido quando a função_criaSenhaBinaria é chamada

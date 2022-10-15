@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 class Revelar:
     def __init__(self, senha, origem):
         self.mensagem = ""
