@@ -3,7 +3,7 @@
 
 # Tema:
 
-Estegnografia de mensagem de texto em imagem.
+Estegnografia de mensagem de texto em imagem. App em python.
 
 # Conceito:
 
