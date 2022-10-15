@@ -1,6 +1,5 @@
 from PIL import Image
 
-
 class Revelar:
     def __init__(self, senha, origem):
         self.mensagem = ""
@@ -22,7 +21,7 @@ class Revelar:
 
     def _revelatamanho(self):
         tamanhodamensage = ""
-        for j in range(self._w):
+        for j in range(self._w-32, self._w):
             if self._data.getpixel((j, 0))[2] % 2 == 0:
                 tamanhodamensage = tamanhodamensage + "0"
             else:
@@ -31,7 +30,7 @@ class Revelar:
 
     def _revelamensagem(self):
         mcont = 0
-        scont = 0
+        scont = 1
         mensagembinaria = ""
         self.mensagem = ""
         for i in range(1, self._h):
@@ -42,14 +41,26 @@ class Revelar:
                     if mcont == self._tamanho:
                         break
                     else:
-                        if not (self._chshbin[scont] == "0"):
-                            if self._data.getpixel((j, i))[2] % 2 == 0:
-                                mensagembinaria = mensagembinaria + "0"
+                        if not (self._chshbin[scont] == "0" and self._chshbin[scont-1] == "0"):
+                            if self._chshbin[scont] == "1" and self._chshbin[scont - 1] == "0":
+                                if self._data.getpixel((j, i))[2] % 2 == 0:
+                                    mensagembinaria = mensagembinaria + "0"
+                                else:
+                                    mensagembinaria = mensagembinaria + "1"
+                            elif self._chshbin[scont] == "0" and self._chshbin[scont - 1] == "1":
+                                if self._data.getpixel((j, i))[1] % 2 == 0:
+                                    mensagembinaria = mensagembinaria + "0"
+                                else:
+                                    mensagembinaria = mensagembinaria + "1"
                             else:
-                                mensagembinaria = mensagembinaria + "1"
+                                if self._data.getpixel((j, i))[0] % 2 == 0:
+                                    mensagembinaria = mensagembinaria + "0"
+                                else:
+                                    mensagembinaria = mensagembinaria + "1"
                             mcont += 1
+
                         if scont == 8 * self._shlen - 1:
-                            scont = 0
+                            scont = 1
                         else:
                             scont += 1
         # Converter a msg para caractere
@@ -61,4 +72,3 @@ class Revelar:
         self._revelatamanho()
         self._revelamensagem()
         return self.mensagem
-
