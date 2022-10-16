@@ -34,24 +34,29 @@ class Ocultar:
 
     def _registratamanho(self):  # altera self_data com infromações do tamanho da mensagem
         tamcont = 0
+        layercont=0
         for j in range(self._w-32, self._w):
             if j < self._w - len(self._tambin):
-                if not (self._data.getpixel((j, 0))[2] % 2 == 0):
+                if not (self._data.getpixel((j, 0))[layercont % 3] % 2 == 0):
                     p = list(self._data.getpixel((j, 0)))
-                    p[2] -= 1
+                    p[layercont % 3] -= 1
                     self._data.putpixel((j, 0), tuple(p))
+                layercont += 1
                 continue
             else:
-                if not ((self._tambin[tamcont] == "0" and self._data.getpixel((j, 0))[2] % 2 == 0) or (
-                        self._tambin[tamcont] == "1" and self._data.getpixel((j, 0))[2] % 2 == 1)):
+                if not ((self._tambin[tamcont] == "0" and self._data.getpixel((j, 0))[layercont % 3] % 2 == 0) or (
+                        self._tambin[tamcont] == "1" and self._data.getpixel((j, 0))[layercont % 3] % 2 == 1)):
                     p = list(self._data.getpixel((j, 0)))
-                    p[2] -= 1
+                    p[layercont % 3] -= 1
                     self._data.putpixel((j, 0), tuple(p))
+                layercont += 1
             tamcont += 1
+
 
     def _registamensagem(self):
         mcont = 0
         scont = 1
+        layercont = 0
         for i in range(1, self._h):
             if mcont == 8 * self._msglen:
                 break

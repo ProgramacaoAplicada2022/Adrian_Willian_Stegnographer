@@ -22,12 +22,15 @@ class Revelar:
 
     def _revelatamanho(self):
         tamanhodamensage = ""
+        layercont = 0
         for j in range(self._w-32, self._w):
-            if self._data.getpixel((j, 0))[2] % 2 == 0:
+            if self._data.getpixel((j, 0))[layercont % 3] % 2 == 0:
                 tamanhodamensage = tamanhodamensage + "0"
             else:
                 tamanhodamensage = tamanhodamensage + "1"
+            layercont += 1
         self._tamanho = 8 * int(tamanhodamensage, 2)
+
 
     def _revelamensagem(self):
         mcont = 0

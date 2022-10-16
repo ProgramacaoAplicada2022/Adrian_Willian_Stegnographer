@@ -7,6 +7,9 @@ from kivy.properties import StringProperty
 from plyer import filechooser
 from Ocultar import Ocultar
 from Revelar import Revelar
+#from OcultarNoRuido import OcultarNoRuido
+#from RevelarDoRuido import RevelarDoRuido
+#from Ruido import criaruido
 
 
 path = ""
