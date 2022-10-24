@@ -29,4 +29,6 @@ Através de um dispositivo Android, selecionar uma Imagem armazenada internament
 
   4- Baixe o programa e rode o arquivo main: estando no diretório dos arquivos baixados execute o comando “python main.py”
   
+  Como mencionado acima, a biblioteca utilizada para interface gráfica é a kivy.
+
   
