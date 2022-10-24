@@ -17,3 +17,13 @@ Através de um dispositivo Android, selecionar uma Imagem armazenada internament
 # Motivação:
 
 : A motivação de desenvolver um aplicativo de esteganografia partiu da importância da segurança da informação dentro da engenharia eletrônica e de comunicações e da ampla aplicação que a técnica de esteganografia teria em atividades de operações militares que necessitam de sigilo. A motivação de ser um aplicativo Android ocorreu da necessidade de mobilidade para transmissão rápida da informação.
+
+# Tutorial:
+ Instalar e executar o programa Steganographer
+ 
+  1- Instale o interpretador python e adicione python nas variáveis de ambiente.
+  2- No ambiente com python instalado, instale a biblioteca kivy com o comando:  "python -m pip install kivy"
+  3- No ambiente com python instalado, instale a biblioteca PIL com o comando: "python -m pip install pillow"
+  4- Baixe o programa e rode o arquivo main: estando no diretório dos arquivos baixados execute o comando “python main.py”
+  
+  
