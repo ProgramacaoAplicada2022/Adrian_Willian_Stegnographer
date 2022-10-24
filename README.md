@@ -24,11 +24,9 @@ Através de um dispositivo Android, selecionar uma Imagem armazenada internament
   1- Instale o interpretador python e adicione python nas variáveis de ambiente. 
 
   2- No ambiente com python instalado, instale a biblioteca kivy com o comando:  "python -m pip install kivy"
-
+    
   3- No ambiente com python instalado, instale a biblioteca PIL com o comando: "python -m pip install pillow"
 
   4- Baixe o programa e rode o arquivo main: estando no diretório dos arquivos baixados execute o comando “python main.py”
   
-  Como mencionado acima, a biblioteca utilizada para interface gráfica é a kivy.
-
-  
+Como mencionado acima, a biblioteca utilizada para interface gráfica é a kivy.
