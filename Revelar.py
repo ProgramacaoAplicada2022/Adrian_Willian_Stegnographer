@@ -1,4 +1,5 @@
 from PIL import Image
+from RuidoMsg import ruido
 
 
 class Revelar:
@@ -23,7 +24,7 @@ class Revelar:
     def _revelatamanho(self):
         tamanhodamensage = ""
         layercont = 0
-        for j in range(self._w-32, self._w):
+        for j in range(self._w - 32, self._w):
             if self._data.getpixel((j, 0))[layercont % 3] % 2 == 0:
                 tamanhodamensage = tamanhodamensage + "0"
             else:
@@ -31,12 +32,14 @@ class Revelar:
             layercont += 1
         self._tamanho = 8 * int(tamanhodamensage, 2)
 
-
     def _revelamensagem(self):
         mcont = 0
         scont = 1
         mensagembinaria = ""
         self.mensagem = ""
+        cont = 0
+        desv = self._h * self._w / int(self._tamanho)
+        rui = ruido(self._tamanho, self._senha, desv)
         for i in range(1, self._h):
             if mcont == self._tamanho:
                 break
@@ -45,7 +48,8 @@ class Revelar:
                     if mcont == self._tamanho:
                         break
                     else:
-                        if not (self._chshbin[scont] == "0" and self._chshbin[scont-1] == "0"):
+                        if not (cont == rui[mcont]):
+                            cont = -1
                             if self._chshbin[scont] == "1" and self._chshbin[scont - 1] == "0":
                                 if self._data.getpixel((j, i))[2] % 2 == 0:
                                     mensagembinaria = mensagembinaria + "0"
@@ -62,11 +66,11 @@ class Revelar:
                                 else:
                                     mensagembinaria = mensagembinaria + "1"
                             mcont += 1
-
                         if scont == 8 * self._shlen - 1:
                             scont = 1
                         else:
-                            scont += 1
+                            scont += 2
+                    cont += 1
         # Converter a msg para caractere
         for i in range(0, len(mensagembinaria), 8):
             self.mensagem = self.mensagem + chr(int(mensagembinaria[i:i + 8], 2))
