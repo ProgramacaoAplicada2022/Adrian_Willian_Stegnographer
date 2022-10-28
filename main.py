@@ -7,10 +7,6 @@ from kivy.properties import StringProperty
 from plyer import filechooser
 from Ocultar import Ocultar
 from Revelar import Revelar
-#from OcultarNoRuido import OcultarNoRuido
-#from RevelarDoRuido import RevelarDoRuido
-#from Ruido import criaruido
-
 
 path = ""
 kv = """TelaPrincipal:
@@ -40,7 +36,7 @@ kv = """TelaPrincipal:
 
             TextInput:
                 id: mensagem
-                text: ''
+                text: 'Mensagem'
 
         BoxLayout:
             orientation:"vertical"
@@ -48,6 +44,7 @@ kv = """TelaPrincipal:
 
             TextInput:
                 id: senha
+                text: 'Senha'
 
             Button:
                 text: 'Procurar Imagem'
