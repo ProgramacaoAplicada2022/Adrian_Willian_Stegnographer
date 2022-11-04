@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from kivy.lang import Builder
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
