@@ -30,3 +30,25 @@ Através de um dispositivo Android, selecionar uma Imagem armazenada internament
   4- Baixe o programa e rode o arquivo main: estando no diretório dos arquivos baixados execute o comando “python main.py”
   
 Como mencionado acima, a biblioteca utilizada para interface gráfica é a kivy.
+
+# Esboço:
+
+A pagina inicial do app é demonstrada abaixo:
+![](pagina_inicial.png)
+
+Como app aberto, o usuário deve selecionar uma imagem a seu critério. para fins de demonstração, será realizada
+a ocultação de uma mensagem e em seguida revelada. Abaixo, encontra-se o app com a imagem selecionada. Para este
+exemplo, tem-se uma imagem com a fachada do IME.
+![](escolha_da_imagem.png)
+
+Digitação da senha e da mensagem a ser ocultada.
+![](imagem_oculta.png)
+
+Após ocultar uma imagem, o app salva como uma nova imagem, no local de arquivo onde se encontra a imagem original,
+uma nova imagem cujo nome será "nomeoriginalv2.png". Tal ocorrência é verificada abaixo.
+![](pasta_nv_img.png)
+
+Para revelar a mensagem, basta selecionar a imagem que contem a mensagem oculta e utilizar a mesma senha a qual 
+foi utilizada para ocultar a mensagem como pode ser visto a seguir:
+![](revelar.png)
+
