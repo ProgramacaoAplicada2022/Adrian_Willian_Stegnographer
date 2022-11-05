@@ -62,7 +62,7 @@ foi utilizada para ocultar a mensagem como pode ser visto a seguir:
 
 ![revelar](https://user-images.githubusercontent.com/115323969/200091400-84aa189d-e53a-4a0a-90d5-054a791581c7.png)
 
-Assim, obtém-se a imagem revelada.
+Assim, obtém-se a mensagem revelada.
 
 ![msg_revelada](https://user-images.githubusercontent.com/115323969/200091409-8534c78f-dd63-48cd-97b7-efe861718562.png)
 
