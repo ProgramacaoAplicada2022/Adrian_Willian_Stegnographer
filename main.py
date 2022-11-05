@@ -56,8 +56,8 @@ kv = """TelaPrincipal:
             Button:
                 text: 'Revelar Mensagem da Imagem'
                 on_press: first_tela.revelar()
-"""
 
+"""
 
 class TelaPrincipal(BoxLayout):
     def ocultar(self):
