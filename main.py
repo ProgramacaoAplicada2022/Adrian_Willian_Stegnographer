@@ -254,6 +254,7 @@ kv = """TelaPrincipal:
 
 """
 
+
 class TelaPrincipal(BoxLayout):
     def ocultar(self):
         global path
