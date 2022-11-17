@@ -112,7 +112,7 @@ class Ocultar:
                     cont += 1
 
     def _salvar(self):
-        self._data.save(self._path[0:str(self._path).rfind(".")] + "v2r.png")
+        self._data.save(self._path[0:str(self._path).rfind(".")] + "v2.png")
 
     def run(self):
         self._criamensagembinaria()
