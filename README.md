@@ -1,4 +1,4 @@
-# Steganographer_v1
+# Steganographer
 # Cap William e Ten Adrian
 
 # Tema:
