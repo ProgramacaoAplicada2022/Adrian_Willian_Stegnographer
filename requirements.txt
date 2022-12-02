@@ -1,0 +1,6 @@
+kivy~=2.1.0
+flask~=1.1.2
+plyer~=2.0.0
+pillow~=9.3.0
+wxPython
+pyinstaller
