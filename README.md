@@ -33,29 +33,22 @@ Como mencionado acima, a biblioteca utilizada para interface gráfica é o wxPyt
 
 A pagina inicial do app é demonstrada abaixo:
 
-![pagina_inicial](https://user-images.githubusercontent.com/115323969/200091292-603558ae-2952-4572-9d5a-2d30426ad7c7.png)
-
-
+![Captura de tela_20221202_170216](https://user-images.githubusercontent.com/114261968/205382791-d01d519e-b41f-464d-ae0f-1488ecd5bae9.png)
 
 Com app aberto, o usuário deve pode selecionar uma imagem clicando no botão "Selecionar Imagem", assim será aberto um seletor de arquivos para o usuário escolher a imagem.
 
-![escolha_da_imagem](https://user-images.githubusercontent.com/115323969/200091373-e0dc0282-97dd-445b-bbdf-2dad67abe798.png)
+![Captura de tela_20221202_171008](https://user-images.githubusercontent.com/114261968/205382906-bc3e5fef-3c96-47da-ab00-ddaae626354a.png)
 
 Para ocultar uma mensagem na Imagem o usuário deverá prencehre o campo senha e Mensagem, em seguida clicar no botão "Ocultar Mensagem na Imagem".
-Ao Clicar será gerada uma nova imagem no mesmo diretório da imagem selecionada, com o mesmo nome acrescido de "v2" no formato PNG.
+Ao clicar será gerada uma nova imagem no mesmo diretório da imagem selecionada, com o mesmo nome acrescido de "v2r" no formato PNG.
 
-![imagem_oculta](https://user-images.githubusercontent.com/115323969/200091384-06780001-bc56-45c4-95f5-423c9a77722b.png)
+![Captura de tela_20221202_174627](https://user-images.githubusercontent.com/114261968/205383515-365073c5-3e66-4a4b-86bc-59770aa6ad0c.png)
 
-
-Para revelar uma mensagem oculta em uma imagem, após a seleção da mesma, o usuário deverá preencher somente o campo Senha e clicar e revelar mensagem da imagem. 
+Para revelar uma mensagem oculta em uma imagem, após a seleção de uma imagem que tem uma mensagem oculta, o usuário deverá preencher somente o campo Senha e clicar em "Revelar Mensagem da Imagem". 
 Ao clicar a mensagem oculta aparecerá no campo mensagem.
 
-![pasta_nv_img](https://user-images.githubusercontent.com/115323969/200091391-837662d2-1443-43c7-a4b7-76b7525fc412.png)
+![Captura de tela_20221202_175012](https://user-images.githubusercontent.com/114261968/205384044-01a1cc66-5b0c-4edc-aaaa-631591d74e78.png)
 
-
-![revelar](https://user-images.githubusercontent.com/115323969/200091400-84aa189d-e53a-4a0a-90d5-054a791581c7.png)
-
-![msg_revelada](https://user-images.githubusercontent.com/115323969/200091409-8534c78f-dd63-48cd-97b7-efe861718562.png)
 
 # Tutorial de compliação do código:
   1- Instale o interpretador python e adicione python nas variáveis de ambiente. 
@@ -66,7 +59,7 @@ Ao clicar a mensagem oculta aparecerá no campo mensagem.
 
   4- No ambiente com python instalado, instale a biblioteca pyistaller para gerar o executável: "python -m pip install pyinstaller"
 
-  5- Baixe o arquivo Steganographer.py e,no diretório do arquivo, execute o comando "pyinstaller --onefile --windowed Steganographer.py
+  5- Baixe o arquivo Steganographer.py e, no diretório do arquivo, execute o comando "pyinstaller --onefile --windowed Steganographer.py
 
 o executável Steganographer.exe estará na pasta dist. para usa-lo basta clicar duas vezes e seguir o tutorial de uso aqui presente.
 
