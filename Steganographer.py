@@ -287,8 +287,6 @@ class Revelar:
         self._revelamensagem()
         return self.mensagem
 
-
-# Implementing MyFrame1
 class Steganographer(Tela):
     def __init__(self, parent):
         Tela.__init__(self, parent)
