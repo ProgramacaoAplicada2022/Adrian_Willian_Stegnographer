@@ -168,7 +168,7 @@ class Ocultar:
                     if mcont == 8 * self._msglen:
                         break
                     else:
-                        if not (cont == rui[mcont]):
+                        if cont == abs(rui[mcont]):
                             cont = -1
                             if self._chshbin[scont] == "1" and self._chshbin[scont - 1] == "0":
                                 if not ((self._chmsgbin[mcont] == "0" and self._data.getpixel((j, i))[2] % 2 == 0) or (
@@ -254,12 +254,12 @@ class Revelar:
                     if mcont == self._tamanho:
                         break
                     else:
-                        if not (cont == rui[mcont]):
+                        if cont == abs(rui[mcont]):
                             cont = -1
                             if self._chshbin[scont] == "1" and self._chshbin[scont - 1] == "0":
                                 if self._data.getpixel((j, i))[2] % 2 == 0:
                                     mensagembinaria = mensagembinaria + "0"
-                                else:
+          ''                      else:
                                     mensagembinaria = mensagembinaria + "1"
                             elif self._chshbin[scont] == "0" and self._chshbin[scont - 1] == "1":
                                 if self._data.getpixel((j, i))[1] % 2 == 0:

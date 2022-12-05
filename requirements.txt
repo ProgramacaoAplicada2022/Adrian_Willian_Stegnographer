@@ -1,6 +1,6 @@
-kivy~=2.1.0
+kivy~=2.1.0 #AdroidVersion
 flask~=1.1.2
-plyer~=2.0.0
+plyer~=2.0.0 #AdroidVersion
 pillow~=9.3.0
 wxPython
 pyinstaller
